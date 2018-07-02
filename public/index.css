@@ -1,0 +1,675 @@
+@font-face {
+  font-family: "LuganskyV";
+  src: url(fonts/LuganskyV.ttf); }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "LuganskyV"; }
+
+input {
+  outline: none; }
+
+A {
+  color: black;
+  text-decoration: none; }
+
+A:visited {
+  color: black; }
+
+A:active {
+  color: black; }
+
+ul {
+  list-style-type: none; }
+
+body {
+  width: 100vw;
+  max-width: 100%; }
+
+@media only screen and (max-width: 767px) {
+  .flex, header nav A, header .navigation_list, header .navigation_list li, .train_section .train_txt_container article, .about_section article, .rout_section, .agena_section, .agena_section h2, .agena_section .agenda_flex_container, .mentors_section, .mentors_section h2, .mentors_section .mentors_flex_container, .photo_section, .photo_section ul, .photo_section ul li, .faq_section .faq_section_container, .faq_section article, .partners_section, .partners_section .partners_section_container .photos_wrapper ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .up-wraper {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 3px;
+    z-index: 1;
+    background-image: url(images/arrowUp.png);
+    background-size: contain;
+    background-position: center; }
+  .burger {
+    display: block;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 3px;
+    z-index: 1;
+    background-image: url(images/menue.png);
+    background-size: contain;
+    background-position: center; }
+  header {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2; }
+    header nav {
+      height: 100%;
+      width: 100%; }
+      header nav A {
+        width: 100%;
+        height: 100%;
+        color: black; }
+      header nav A:visited {
+        color: black; }
+      header nav A:active {
+        color: black; }
+    header .navigation_list {
+      flex-direction: column;
+      height: 100%;
+      background: white; }
+      header .navigation_list li {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        transition: background 1s; }
+      header .navigation_list li:hover {
+        background: #2196f3;
+        color: black; }
+  .unactive_mobile {
+    display: none; }
+  .active_mobile {
+    display: flex; } }
+
+@media only screen and (min-width: 768px) {
+  nav A, .navigation_list, .navigation_list li, .train_section .train_txt_container article, .about_section article, .rout_section, .agena_section, .agena_section h2, .agena_section .agenda_flex_container, .mentors_section, .mentors_section h2, .mentors_section .mentors_flex_container, .photo_section, .photo_section ul, .photo_section ul li, .faq_section .faq_section_container, .faq_section article, .partners_section, .partners_section .partners_section_container .photos_wrapper ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .up-wraper {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    right: 3px;
+    z-index: 1;
+    cursor: pointer;
+    background-image: url(images/arrowUp.png);
+    background-size: contain;
+    background-position: center; }
+  .burger {
+    display: none; }
+  header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    color: white; }
+  nav {
+    width: 100%;
+    height: 100%; }
+    nav A {
+      width: 100%;
+      height: 100%;
+      color: white; }
+    nav A:visited {
+      color: white; }
+    nav A:active {
+      color: white; }
+  .navigation_list {
+    flex-direction: row;
+    height: 100%;
+    background: black; }
+    .navigation_list li {
+      height: 100%;
+      width: 20%;
+      cursor: pointer;
+      transition: background 1s; }
+    .navigation_list li:hover {
+      background: #2196f3;
+      color: black; } }
+
+@media only screen and (max-width: 767px) {
+  .flex, header nav A, header .navigation_list, header .navigation_list li, .train_section .train_txt_container article, .about_section article, .rout_section, .agena_section, .agena_section h2, .agena_section .agenda_flex_container, .mentors_section, .mentors_section h2, .mentors_section .mentors_flex_container, .photo_section, .photo_section ul, .photo_section ul li, .faq_section .faq_section_container, .faq_section article, .partners_section, .partners_section .partners_section_container .photos_wrapper ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  @keyframes moveTrain {
+    0% {
+      margin-right: 70%; }
+    10% {
+      margin-bottom: -2px; }
+    20% {
+      margin-bottom: -5px; }
+    30% {
+      margin-bottom: -2px; }
+    40% {
+      margin-bottom: -5px; }
+    50% {
+      margin-bottom: -2px; }
+    60% {
+      margin-bottom: -5px; }
+    70% {
+      margin-bottom: -2px; }
+    85% {
+      margin-bottom: -5px; }
+    90% {
+      margin-bottom: -2px; }
+    100% {
+      margin-right: 0%;
+      margin-bottom: -5px; } }
+  @keyframes moveLandscape {
+    0% {
+      margin-left: 0%; }
+    100% {
+      margin-left: -50%; } }
+  @keyframes changeBg {
+    from {
+      background: white; }
+    to {
+      background: darkkhaki; } }
+  main {
+    width: 100%; }
+    main section {
+      width: 100%;
+      height: 100vh;
+      background: black; }
+  .train_section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation: changeBg 5s infinite ease-out;
+    animation-direction: alternate;
+    position: relative; }
+    .train_section .train_txt_container {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around; }
+      .train_section .train_txt_container article {
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center; }
+        .train_section .train_txt_container article h1 {
+          text-align: center; }
+        .train_section .train_txt_container article img {
+          width: 150px;
+          padding: 10px 0px 10px 0px; }
+    .train_section .registration_btn {
+      text-decoration: none;
+      text-align: center;
+      padding: 11px 32px;
+      border: solid 1px #000000;
+      -webkit-border-radius: 26px;
+      -moz-border-radius: 26px;
+      border-radius: 26px;
+      font-size: 20px;
+      color: white;
+      background: #000000;
+      cursor: pointer; }
+    .train_section .train {
+      max-width: 1100px;
+      min-width: 1100px;
+      display: flex;
+      flex-direction: row-reverse;
+      margin-right: 70%; }
+      .train_section .train img {
+        margin-bottom: -5px;
+        width: 100%;
+        height: 133px; }
+      .train_section .train .train_head {
+        animation: moveTrain 5s infinite ease-out;
+        animation-direction: alternate; }
+    .train_section .rails {
+      width: 150%;
+      height: 14px;
+      background-image: url(images/rails.png);
+      animation: moveLandscape 2s infinite linear;
+      animation-direction: normal; }
+    .train_section .gras {
+      width: 150%;
+      height: 200px;
+      animation-direction: normal;
+      background-color: chocolate; }
+  .about_section {
+    background-color: black;
+    color: white;
+    overflow: hidden; }
+    .about_section article {
+      width: 100%;
+      height: 100%;
+      flex-direction: column; }
+      .about_section article p {
+        padding: 15px 30px 15px 30px;
+        text-align: center; }
+  .rout_section {
+    background-color: white; }
+    .rout_section div {
+      width: 80%;
+      height: 80%;
+      background: url(images/map.jpg) no-repeat;
+      background-size: contain;
+      background-position: center; }
+  .agena_section {
+    background-color: white;
+    overflow: hidden;
+    flex-direction: column; }
+    .agena_section article {
+      margin: 10px; }
+    .agena_section h2 {
+      width: 100%;
+      flex-grow: 1; }
+    .agena_section h3 {
+      text-align: center;
+      padding-top: 10px; }
+    .agena_section ul li {
+      padding: 5px 0px 5px 0px;
+      border-bottom: 1px solid black; }
+    .agena_section .agenda_flex_container {
+      margin: 20px 0px 20px 0px;
+      padding: 0px 5% 0px 5%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      flex-grow: 1;
+      width: 106%;
+      align-items: baseline;
+      justify-content: space-around;
+      overflow: scroll;
+      overflow-x: hidden; }
+  .mentors_section {
+    overflow: hidden;
+    flex-direction: column;
+    background-color: black;
+    color: white; }
+    .mentors_section h2 {
+      margin-top: 10px;
+      width: 100%;
+      flex-grow: 1; }
+    .mentors_section .mentors_flex_container {
+      flex-grow: 1;
+      width: 106%;
+      align-items: baseline;
+      flex-direction: row;
+      flex-wrap: wrap;
+      overflow: scroll;
+      overflow-x: hidden;
+      justify-content: space-around;
+      margin: 20px 0px 20px 0px;
+      padding: 0px 5% 0px 5%; }
+      .mentors_section .mentors_flex_container figure {
+        margin-bottom: 5px; }
+        .mentors_section .mentors_flex_container figure img {
+          width: 250px;
+          height: 250px;
+          border-radius: 50%; }
+        .mentors_section .mentors_flex_container figure figcaption {
+          text-align: center; }
+  .photo_section {
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center; }
+    .photo_section .more_photo_btn {
+      text-decoration: none;
+      text-align: center;
+      padding: 11px 32px;
+      margin-bottom: 10px;
+      border: solid 1px #000000;
+      -webkit-border-radius: 26px;
+      -moz-border-radius: 26px;
+      border-radius: 26px;
+      font-size: 20px;
+      color: white;
+      background: #000000;
+      cursor: pointer; }
+    .photo_section input {
+      cursor: pointer; }
+    .photo_section h2 {
+      width: 100%;
+      text-align: center; }
+    .photo_section ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 106%;
+      height: 90%;
+      padding: 0px 5% 0px 5%;
+      margin-bottom: 10px;
+      overflow: scroll;
+      overflow-x: hidden; }
+      .photo_section ul li {
+        flex-grow: 1; }
+        .photo_section ul li img {
+          margin: 10px;
+          border: 1px solid black;
+          border-radius: 5%;
+          width: 100%; }
+  .faq_section {
+    background-color: black;
+    color: white;
+    overflow: hidden; }
+    .faq_section .faq_section_container {
+      width: 106%;
+      overflow: scroll;
+      overflow-x: hidden;
+      height: 100%;
+      padding-right: 6%;
+      flex-direction: row;
+      flex-wrap: wrap; }
+    .faq_section article {
+      flex-direction: column;
+      flex-grow: 1;
+      width: 50%; }
+      .faq_section article P {
+        text-align: center;
+        padding: 0px 20px 20px 20px; }
+      .faq_section article h3 {
+        text-align: center;
+        padding: 0px 20px 20px 20px;
+        text-decoration: underline; }
+  .partners_section {
+    background: white; }
+    .partners_section .partners_section_container {
+      overflow: hidden;
+      width: 70%;
+      height: 90%; }
+      .partners_section .partners_section_container .photos_wrapper {
+        width: 106%;
+        height: 100%;
+        overflow: scroll;
+        overflow-x: hidden; }
+        .partners_section .partners_section_container .photos_wrapper h2 {
+          text-align: center; }
+        .partners_section .partners_section_container .photos_wrapper ul {
+          flex-direction: row;
+          flex-wrap: wrap; }
+          .partners_section .partners_section_container .photos_wrapper ul li {
+            padding: 20px; }
+        .partners_section .partners_section_container .photos_wrapper img {
+          width: 200px; } }
+
+@media only screen and (min-width: 768px) {
+  nav A, .navigation_list, .navigation_list li, .train_section .train_txt_container article, .about_section article, .rout_section, .agena_section, .agena_section h2, .agena_section .agenda_flex_container, .mentors_section, .mentors_section h2, .mentors_section .mentors_flex_container, .photo_section, .photo_section ul, .photo_section ul li, .faq_section .faq_section_container, .faq_section article, .partners_section, .partners_section .partners_section_container .photos_wrapper ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  @keyframes moveTrain {
+    0% {
+      margin-right: 70%; }
+    10% {
+      margin-bottom: -2px; }
+    20% {
+      margin-bottom: -5px; }
+    30% {
+      margin-bottom: -2px; }
+    40% {
+      margin-bottom: -5px; }
+    50% {
+      margin-bottom: -2px; }
+    60% {
+      margin-bottom: -5px; }
+    70% {
+      margin-bottom: -2px; }
+    85% {
+      margin-bottom: -5px; }
+    90% {
+      margin-bottom: -2px; }
+    100% {
+      margin-right: 0%;
+      margin-bottom: -5px; } }
+  @keyframes moveLandscape {
+    0% {
+      margin-left: 0%; }
+    100% {
+      margin-left: -50%; } }
+  @keyframes changeBg {
+    from {
+      background: white; }
+    to {
+      background: darkkhaki; } }
+  main {
+    width: 100%; }
+    main section {
+      width: 100%;
+      height: 100vh;
+      background: black; }
+  .train_section {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation: changeBg 5s infinite ease-out;
+    animation-direction: alternate;
+    position: relative; }
+    .train_section .train_txt_container {
+      position: absolute;
+      top: 60px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around; }
+      .train_section .train_txt_container article {
+        flex-direction: column;
+        justify-content: space-around; }
+        .train_section .train_txt_container article img {
+          width: 150px;
+          padding: 10px 0px 10px 0px; }
+    .train_section .registration_btn {
+      text-decoration: none;
+      text-align: center;
+      padding: 11px 32px;
+      border: solid 1px #000000;
+      -webkit-border-radius: 26px;
+      -moz-border-radius: 26px;
+      border-radius: 26px;
+      font-size: 20px;
+      color: white;
+      background: #000000;
+      cursor: pointer; }
+    .train_section .train {
+      max-width: 1100px;
+      min-width: 1100px;
+      display: flex;
+      flex-direction: row-reverse;
+      margin-right: 70%; }
+      .train_section .train img {
+        margin-bottom: -5px;
+        width: 100%;
+        height: 133px; }
+      .train_section .train .train_head {
+        animation: moveTrain 5s infinite ease-out;
+        animation-direction: alternate; }
+    .train_section .rails {
+      width: 150%;
+      height: 14px;
+      background-image: url(images/rails.png);
+      animation: moveLandscape 2s infinite linear;
+      animation-direction: normal; }
+    .train_section .gras {
+      width: 150%;
+      height: 200px;
+      animation-direction: normal;
+      background-color: chocolate; }
+  .about_section {
+    background-color: black;
+    color: white;
+    overflow: hidden; }
+    .about_section article {
+      width: 100%;
+      height: 100%;
+      flex-direction: column; }
+      .about_section article p {
+        padding: 15px 30px 15px 30px;
+        text-align: center; }
+  .rout_section {
+    background-color: white; }
+    .rout_section div {
+      width: 80%;
+      height: 80%;
+      background: url(images/map.jpg) no-repeat;
+      background-size: contain;
+      background-position: center; }
+  .agena_section {
+    background-color: white;
+    overflow: hidden;
+    flex-direction: column; }
+    .agena_section article {
+      margin: 10px; }
+    .agena_section h2 {
+      width: 100%;
+      flex-grow: 1; }
+    .agena_section h3 {
+      text-align: center;
+      padding-top: 10px; }
+    .agena_section ul li {
+      padding: 5px 0px 5px 0px;
+      border-bottom: 1px solid black; }
+    .agena_section .agenda_flex_container {
+      margin: 20px 0px 20px 0px;
+      padding: 0px 5% 0px 5%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      flex-grow: 1;
+      width: 106%;
+      align-items: baseline;
+      justify-content: space-around;
+      overflow: scroll;
+      overflow-x: hidden; }
+  .mentors_section {
+    overflow: hidden;
+    flex-direction: column;
+    background-color: black;
+    color: white; }
+    .mentors_section h2 {
+      margin-top: 10px;
+      width: 100%;
+      flex-grow: 1; }
+    .mentors_section .mentors_flex_container {
+      flex-grow: 1;
+      width: 106%;
+      align-items: baseline;
+      flex-direction: row;
+      flex-wrap: wrap;
+      overflow: scroll;
+      overflow-x: hidden;
+      justify-content: space-around;
+      margin: 20px 0px 20px 0px;
+      padding: 0px 5% 0px 5%; }
+      .mentors_section .mentors_flex_container figure {
+        margin-bottom: 5px; }
+        .mentors_section .mentors_flex_container figure img {
+          width: 250px;
+          height: 250px;
+          border-radius: 50%; }
+        .mentors_section .mentors_flex_container figure figcaption {
+          text-align: center; }
+  .photo_section {
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center; }
+    .photo_section .more_photo_btn {
+      text-decoration: none;
+      text-align: center;
+      padding: 11px 32px;
+      margin-bottom: 10px;
+      border: solid 1px #000000;
+      -webkit-border-radius: 26px;
+      -moz-border-radius: 26px;
+      border-radius: 26px;
+      font-size: 20px;
+      color: white;
+      background: #000000;
+      cursor: pointer; }
+    .photo_section input {
+      cursor: pointer; }
+    .photo_section h2 {
+      width: 100%;
+      text-align: center; }
+    .photo_section ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 106%;
+      height: 90%;
+      padding: 0px 5% 0px 5%;
+      margin-bottom: 10px;
+      overflow: scroll;
+      overflow-x: hidden; }
+      .photo_section ul li {
+        flex-grow: 1; }
+        .photo_section ul li img {
+          margin: 10px;
+          border: 1px solid black;
+          border-radius: 5%;
+          width: 100%; }
+  .faq_section {
+    background-color: black;
+    color: white;
+    overflow: hidden; }
+    .faq_section .faq_section_container {
+      width: 106%;
+      overflow: scroll;
+      overflow-x: hidden;
+      height: 100%;
+      padding-right: 6%;
+      flex-direction: row;
+      flex-wrap: wrap; }
+    .faq_section article {
+      flex-direction: column;
+      flex-grow: 1;
+      width: 50%; }
+      .faq_section article P {
+        text-align: center;
+        padding: 0px 20px 20px 20px; }
+      .faq_section article h3 {
+        text-align: center;
+        padding: 0px 20px 20px 20px;
+        text-decoration: underline; }
+  .partners_section {
+    background: white; }
+    .partners_section .partners_section_container {
+      overflow: hidden;
+      width: 70%;
+      height: 90%; }
+      .partners_section .partners_section_container .photos_wrapper {
+        width: 106%;
+        height: 100%;
+        overflow: scroll;
+        overflow-x: hidden; }
+        .partners_section .partners_section_container .photos_wrapper h2 {
+          text-align: center; }
+        .partners_section .partners_section_container .photos_wrapper ul {
+          flex-direction: row;
+          flex-wrap: wrap; }
+          .partners_section .partners_section_container .photos_wrapper ul li {
+            padding: 20px; }
+        .partners_section .partners_section_container .photos_wrapper img {
+          width: 200px; } }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  border-top: 2px solid black; }
+  footer h3 {
+    padding-bottom: 10px; }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+

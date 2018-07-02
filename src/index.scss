@@ -1,0 +1,33 @@
+@font-face{
+  font-family: "LuganskyV";
+  src: url("fonts/LuganskyV.ttf");
+}
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family:"LuganskyV";
+}
+input{
+  outline: none;
+}
+A {
+ color: black;
+ text-decoration: none;
+}
+A:visited {
+ color: black;
+}
+A:active {
+ color: black;
+}
+ul{
+  list-style-type: none
+}
+body{
+  width: 100vw;
+  max-width:100%;
+}
+@import "header/header.scss";
+@import "main/main.scss";
+@import "footer/footer.scss";

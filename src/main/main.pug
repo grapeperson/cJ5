@@ -1,0 +1,113 @@
+include ../pug_mixins/mixins.pug 
+main
+  section.train_section#train_section 
+    div.train_txt_container
+      article
+        h1 Imaguru Hackathon on Train 
+        p Minsk - Riga 
+      article
+          img.train_head(src='../public/images/Magnetic_LIAA_ERAF.png')
+          img(src='../public/images/logo-imaguru.png')
+      article
+        |   August 30 - September 1, 2018 
+        a(href="#")
+          input.registration_btn(type="button" value="Registration")
+        a(href="#")
+          |   link
+    div.train
+      img.train_head(src='../public/images/train.png')
+      img(src='../public/images/train2.png')
+    div.rails
+    div.gras
+  section.about_section#about_section
+    article
+      p
+        |  For the first time in Belarus. Starting at Imaguru on August 30th,
+        |  continuing on a train in Riga, finishing after our arrival in Riga and ending at ///.
+      p
+        |  The now legendary Hackatrain attracts developers, designers and entrepreneurs from all
+        |  over the world, all hoping to strike it big, hackathon-style.
+      p
+        |  This isn’t your typical hackathon. Say goodbye to boring venues and hello to travelling 
+        |  around with more than 50 fellow hackers competing across mobility challenges. Are you ready for Hackathon on Train Minsk-Riga?
+  section.rout_section#rout_section
+    div
+  section.agena_section
+    h2 Agenda
+    div.agenda_flex_container
+      article
+        h3 
+          |  Aug 30 
+        +createList('','17:00 - 17:30 Registration','18:00 - 18:30 Opening Ceremony',' 18:30 - 20:00 Pitching in Minsk / Hackathon Starts')  
+      article
+        h3
+          |  Aug 31
+        +createList('','09:00 - 11:00 Breakfast / Check-point','11:00 Mentoring Session','13:00 - 14:00 Lunch','14:00 Mentoring Session',
+                    '18:00 - Dinner / Departure for train','20:15 - Train departures','20:15 - … Hacking')         
+      article
+        h3
+          |  Sept 1
+        +createList('','08:00 - Train Arrives to Riga','09:00 - 11:00 Breakfast / Check-point','11:00 Mentoring Session','13:00 - 14:00 Lunch',
+                    '14:00 - 18:00 Final Preparation','18:00 - 19:30 Final Stage','19:30 - 21:00 Award Ceremony. Party')
+  section.mentors_section#photo_section
+    h2 Mentors
+    div.mentors_flex_container
+      figure
+        img(src='../public/images/cool_man.jpg')
+        figcaption cool young man
+      figure
+        img(src='../public/images/cool_man.jpg')
+        figcaption cool young man
+      figure
+        img(src='../public/images/cool_man.jpg')
+        figcaption cool young man
+      figure
+        img(src='../public/images/cool_man.jpg')
+        figcaption cool young man
+  section.photo_section
+      h2 Photos
+      +createImgList("../public/images/1_gallery.jpg","../public/images/4_gallery.jpg","../public/images/6_gallery.jpg",
+                     "../public/images/7_gallery.jpg","../public/images/8_gallery.jpg","../public/images/1_gallery.jpg") 
+      a(href="https://www.facebook.com/groups/TheRollingScopes/photos/?filter=albums")
+        input.more_photo_btn(type="button" value="more photos")
+  section.faq_section#faq_section
+    div.faq_section_container
+      article
+        h3
+          |  How do I get my train ticket?
+        p
+          |  The check-in for participants will be organized at Restaurant 1e Klas, located at platform 2B, Amsterdam Central Station.
+      article
+        h3
+          |  From where is the Hackatrain departing?
+        P
+          |  The check-in for participants will be organized at Restaurant 1e Klas, located at platform 2B, Amsterdam Central Station.
+      article
+        h3
+          |  What time is the Hackatrain departing?
+        p
+          |  The check-in for participants will be organized at Restaurant 1e Klas, located at platform 2B, Amsterdam Central Station.
+      article
+        h3 
+          |  What about the return trip? 
+        p
+          |  The check-in for participants will be organized at Restaurant 1e Klas, located at platform 2B, Amsterdam Central Station.
+  section.partners_section#partners_section
+    div.partners_section_container
+      div.photos_wrapper
+        h2 ORGANIZERS
+        +createImgList("../public/images/logo-rs.png","../public/images/logo-imaguru.png") 
+        h2 PARTNERS
+        +createImgList("../public/images/logo-epam.png","../public/images/logo-emerline.png","../public/images/logo-evolution-gaming.png",
+                       "../public/images/logo-oxagile.png","../public/images/logo-hqsoftware.png","../public/images/logo-apalon.png","../public/images/logo-nikofirm.png") 
+        h2 TRAVEL SPONSORS
+        +createImgList("../public/images/logo-mozilla.png","../public/images/logo-microsoft.png","../public/images/logo-yandex.png","../public/images/logo-yandex.png",
+                       "../public/images/logo-egnyte.png","../public/images/logo-keepsolid.png","../public/images/logo-toptal.png") 
+        h2 INFORMATION PARTNERS
+        +createImgList("../public/images/logo-devby.png","../public/images/logo-onliner.png") 
+    
+
+
+    
+    
+  

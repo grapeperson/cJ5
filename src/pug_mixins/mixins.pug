@@ -1,0 +1,10 @@
+mixin createList(classNameUl, ...items)
+ ul(class=classNameUl)
+  each item in items
+    li= item
+    
+mixin createImgList(...items)
+ ul
+  each item in items
+    li
+      img(src=item)

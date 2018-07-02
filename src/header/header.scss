@@ -1,0 +1,143 @@
+
+
+
+@media only screen and (max-width: 767px)  {
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .up-wraper{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    bottom:0;
+    right: 3px;
+    z-index: 1;
+    background-image:url('../public/images/arrowUp.png');
+    background-size: contain;
+    background-position:center;
+  }
+  .burger{
+    display: block;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    top:0;
+    right: 3px;
+    z-index: 1;
+    background-image:url('../public/images/menue.png');
+    background-size: contain;
+    background-position:center;
+  }
+  header{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+    nav{
+      height: 100%;
+      width: 100%;
+      A {
+        width: 100%;
+        height: 100%;
+        @extend .flex;
+        color: black;
+      }
+      A:visited {
+       color: black;
+      }
+      A:active {
+       color: black;
+      }
+    }
+    .navigation_list{
+      flex-direction:column;
+      @extend .flex;
+      height: 100%;
+      background: white;
+      li{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        @extend .flex;
+        transition: background 1s;
+      }
+      li:hover{
+        background: #2196f3;
+        color:black;
+      }
+    }
+  }
+  .unactive_mobile{
+    display: none;
+  }
+  .active_mobile{
+    display: flex;
+  }
+}
+@media only screen and (min-width: 768px)  {
+  %flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .up-wraper{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom:0;
+    right: 3px;
+    z-index: 1;
+    cursor: pointer;
+    background-image:url('../public/images/arrowUp.png');
+    background-size: contain;
+    background-position:center;
+  }
+  .burger{
+    display: none;
+  }
+  header{
+    width: 100%;
+    height:50px;
+    position: fixed;
+    z-index: 1;
+    color: white;
+
+  }
+  nav{
+    width: 100%;
+    height: 100%;
+    A {
+      width: 100%;
+      height: 100%;
+      @extend %flex;
+      color: white;
+    }
+    A:visited {
+     color: white;
+    }
+    A:active {
+     color: white;
+    }
+  }
+  .navigation_list{
+    flex-direction: row;
+    @extend %flex;
+    height: 100%;
+    background: black;
+    li{
+      height: 100%;
+      width: 20%;
+
+      cursor: pointer;
+      @extend %flex;
+      transition: background 1s;
+    }
+    li:hover{
+      background: #2196f3;
+      color:black;
+    }
+  }
+
+}
